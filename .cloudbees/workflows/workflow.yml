@@ -94,9 +94,9 @@ jobs:
     - uses: docker://alpine/helm:latest
       run: |
         helm upgrade \
-          --namespace arch-saas \
+          --namespace hello-go-app \
           --create-namespace \
           --install \
           --version ${{ needs.build.outputs.chart-version }} \
-          arch-saas ${{ needs.build.outputs.chart-location }}
+          app-chart ${{ needs.build.outputs.chart-location }}
 
