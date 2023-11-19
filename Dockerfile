@@ -1,6 +1,6 @@
 
 # runtime container
-FROM alpine:3.18.2
+FROM alpine:3.18
 
 WORKDIR /app
 COPY ./build/app-main /app/
