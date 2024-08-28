@@ -46,7 +46,7 @@ func setupRouter(ctx context.Context) *gin.Engine {
 	ginEngine.Use(gin.Recovery())
 
 	ginEngine.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, "hello world")
+		c.String(http.StatusOK, "hello world2")
 	})
 
 	return ginEngine
