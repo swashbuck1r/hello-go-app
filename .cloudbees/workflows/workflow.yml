@@ -6,7 +6,7 @@ name: workflow
 on:
   push:
     branches:
-      - "main"
+      - main
 jobs:
   approval:
     environment: prod-approval
