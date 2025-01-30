@@ -7,6 +7,10 @@ on:
   push:
     branches:
       - main
+
+permissions:
+  id-token: write
+  
 jobs:
   approval:
     environment: prod-approval
@@ -41,9 +45,7 @@ jobs:
         id: aws-login
         with:
           aws-region: us-east-1
-          aws-access-key-id: ${{ vars.aws_access_key_id }}
-          aws-secret-access-key: ${{ secrets.aws_secret_access_key }}
-          role-to-assume: cloudbees-ecr-publisher
+          role-to-assume: arn:aws:iam::189768267137:role/cloudbees-ecr-publisher
           role-duration-seconds: "3600" # need to override default of 6h as this role has 1h max
 
       - name: Log in to ECR
