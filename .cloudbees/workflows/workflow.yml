@@ -45,4 +45,4 @@ jobs:
       - name: Build, tag, and push a container image to ECR
         uses: cloudbees-io/kaniko@v1
         with:
-          destination: ${{ steps.aws-login.outputs.aws-account-id }}.dkr.ecr.us-east-1.amazonaws.com/hello-go-app:0.0.1
+          destination: ${{ steps.aws-login.outputs.aws-account-id }}.dkr.ecr.us-east-1.amazonaws.com/hello-go-app:0.0.7
